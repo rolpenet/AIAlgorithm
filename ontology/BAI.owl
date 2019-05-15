@@ -1,0 +1,472 @@
+@prefix : <http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#> .
+@prefix aib: <http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB> .
+
+<http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#hasGoal
+aib:hasGoal rdf:type owl:ObjectProperty ;
+            rdfs:domain [ rdf:type owl:Restriction ;
+                          owl:onProperty aib:hasGoal ;
+                          owl:someValuesFrom aib:AIAlgoritm
+                        ] ;
+            rdfs:range [ rdf:type owl:Restriction ;
+                         owl:onProperty aib:useAlgorithm ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass aib:Goal
+                       ] .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#hasGoalTest
+aib:hasGoalTest rdf:type owl:ObjectProperty ;
+                rdfs:domain aib:Goal ;
+                rdfs:range aib:GoalTest .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#hasSubproblem
+aib:hasSubproblem rdf:type owl:ObjectProperty ,
+                           owl:ReflexiveProperty ;
+                  rdfs:domain aib:Problem ;
+                  rdfs:range aib:Problem .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#isResolvedBy
+aib:isResolvedBy rdf:type owl:ObjectProperty ;
+                 rdfs:domain aib:Problem ;
+                 rdfs:range aib:Algorithm .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#isUsedIn
+aib:isUsedIn rdf:type owl:ObjectProperty ;
+             owl:inverseOf aib:useAlgorithm ;
+             rdfs:domain [ rdf:type owl:Restriction ;
+                           owl:onProperty aib:useAlgorithm ;
+                           owl:someValuesFrom aib:AIAlgoritm
+                         ] ;
+             rdfs:range [ rdf:type owl:Restriction ;
+                          owl:onProperty aib:useAlgorithm ;
+                          owl:someValuesFrom aib:ArtificialIntelligence
+                        ] .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#resolves
+aib:resolves rdf:type owl:ObjectProperty ;
+             rdfs:domain aib:Algorithm ;
+             rdfs:range aib:Problem .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#useAlgorithm
+aib:useAlgorithm rdf:type owl:ObjectProperty ;
+                 rdfs:domain [ rdf:type owl:Restriction ;
+                               owl:onProperty aib:useAlgorithm ;
+                               owl:someValuesFrom aib:ArtificialIntelligence
+                             ] ;
+                 rdfs:range [ rdf:type owl:Restriction ;
+                              owl:onProperty aib:useAlgorithm ;
+                              owl:someValuesFrom aib:AIAlgoritm
+                            ] .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#isComplete
+aib:isComplete rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain [ rdf:type owl:Restriction ;
+                             owl:onProperty owl:topObjectProperty ;
+                             owl:someValuesFrom aib:Algorithm
+                           ] ;
+               rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#isDeterministic
+aib:isDeterministic rdf:type owl:DatatypeProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain aib:Environment ;
+                    rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#isDiscrete
+aib:isDiscrete rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain aib:Environment ;
+               rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#isEpisodic
+aib:isEpisodic rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain aib:Environment ;
+               rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#isObservable
+aib:isObservable rdf:type owl:DatatypeProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain aib:Environment ;
+                 rdfs:range xsd:string ,
+                            [ rdf:type rdfs:Datatype ;
+                              owl:oneOf [ rdf:type rdf:List ;
+                                          rdf:first "nu" ;
+                                          rdf:rest [ rdf:type rdf:List ;
+                                                     rdf:first "partial" ;
+                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                rdf:first "total" ;
+                                                                rdf:rest rdf:nil
+                                                              ]
+                                                   ]
+                                        ]
+                            ] .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#isOptimal
+aib:isOptimal rdf:type owl:DatatypeProperty ;
+              rdfs:domain [ rdf:type owl:Restriction ;
+                            owl:onProperty owl:topObjectProperty ;
+                            owl:someValuesFrom aib:Algorithm
+                          ] ;
+              rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#isStatic
+aib:isStatic rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain aib:Environment ;
+             rdfs:range xsd:boolean .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#AIAgent
+aib:AIAgent rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#AIAlgoritm
+aib:AIAlgoritm rdf:type owl:Class ;
+               rdfs:subClassOf aib:Algorithm .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#Action
+aib:Action rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#Algorithm
+aib:Algorithm rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#AlphaBetaPruning
+aib:AlphaBetaPruning rdf:type owl:Class ;
+                     rdfs:subClassOf aib:SearchAlgoritm .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#AndOrSearch
+aib:AndOrSearch rdf:type owl:Class ;
+                rdfs:subClassOf aib:SearchAlgoritm .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#ArtificialIntelligence
+aib:ArtificialIntelligence rdf:type owl:Class ;
+                           rdfs:subClassOf aib:SearchAlgoritm .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#BestFirstSearch
+aib:BestFirstSearch rdf:type owl:Class ;
+                    rdfs:subClassOf aib:SearchAlgoritm .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#BidirectionalSearch
+aib:BidirectionalSearch rdf:type owl:Class ;
+                        rdfs:subClassOf aib:SearchAlgoritm .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#BreadthFirstSearch
+aib:BreadthFirstSearch rdf:type owl:Class ;
+                       rdfs:subClassOf aib:SearchAlgoritm .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#ComputerVision
+aib:ComputerVision rdf:type owl:Class ;
+                   rdfs:subClassOf aib:ArtificialIntelligence .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#ContinuousSpaceSearch
+aib:ContinuousSpaceSearch rdf:type owl:Class ;
+                          rdfs:subClassOf aib:SearchMethodologies .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#Control_methods
+aib:Control_methods rdf:type owl:Class ;
+                    rdfs:subClassOf aib:ArtificialIntelligence .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#DepthFirstSearch
+aib:DepthFirstSearch rdf:type owl:Class ;
+                     rdfs:subClassOf aib:SearchAlgoritm .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#DiscreteSpaceSearch
+aib:DiscreteSpaceSearch rdf:type owl:Class ;
+                        rdfs:subClassOf aib:SearchMethodologies .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#DistributedAI
+aib:DistributedAI rdf:type owl:Class ;
+                  rdfs:subClassOf aib:ArtificialIntelligence .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#Environment
+aib:Environment rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#GameTreeSearch
+aib:GameTreeSearch rdf:type owl:Class ;
+                   rdfs:subClassOf aib:SearchMethodologies ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty aib:useAlgorithm ;
+                                     owl:someValuesFrom aib:AlphaBetaPruning
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty aib:useAlgorithm ;
+                                     owl:someValuesFrom aib:MiniMax
+                                   ] .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#GeneticAlgoritms
+aib:GeneticAlgoritms rdf:type owl:Class ;
+                     rdfs:subClassOf aib:SearchAlgoritm .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#GlobalSearch
+aib:GlobalSearch rdf:type owl:Class ;
+                 rdfs:subClassOf aib:ContinuousSpaceSearch .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#Goal
+aib:Goal rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#GoalTest
+aib:GoalTest rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#GreedyBestFirstSearch
+aib:GreedyBestFirstSearch rdf:type owl:Class ;
+                          rdfs:subClassOf aib:SearchAlgoritm .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#HillClimbing
+aib:HillClimbing rdf:type owl:Class ;
+                 rdfs:subClassOf aib:SearchAlgoritm .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#InformedSearchAlgorithms
+aib:InformedSearchAlgorithms rdf:type owl:Class ;
+                             rdfs:subClassOf aib:DiscreteSpaceSearch ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty aib:useAlgorithm ;
+                                               owl:someValuesFrom aib:BestFirstSearch
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty aib:useAlgorithm ;
+                                               owl:someValuesFrom aib:GreedyBestFirstSearch
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty aib:useAlgorithm ;
+                                               owl:someValuesFrom <http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#A*Search>
+                                             ] .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#LocalBeamSearch
+aib:LocalBeamSearch rdf:type owl:Class ;
+                    rdfs:subClassOf aib:SearchAlgoritm .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#LocalSearch
+aib:LocalSearch rdf:type owl:Class ;
+                rdfs:subClassOf aib:ContinuousSpaceSearch ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty aib:useAlgorithm ;
+                                  owl:someValuesFrom aib:GeneticAlgoritms
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty aib:useAlgorithm ;
+                                  owl:someValuesFrom aib:HillClimbing
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty aib:useAlgorithm ;
+                                  owl:someValuesFrom aib:LocalBeamSearch
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty aib:useAlgorithm ;
+                                  owl:someValuesFrom aib:SimulatedAnealing
+                                ] .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#MachineLearning
+aib:MachineLearning rdf:type owl:Class ;
+                    rdfs:subClassOf aib:ArtificialIntelligence .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#MiniMax
+aib:MiniMax rdf:type owl:Class ;
+            rdfs:subClassOf aib:SearchAlgoritm .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#NaturalLanguageProcessing
+aib:NaturalLanguageProcessing rdf:type owl:Class ;
+                              rdfs:subClassOf aib:ArtificialIntelligence .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#OptimalSolution
+aib:OptimalSolution rdf:type owl:Class ;
+                    rdfs:subClassOf aib:Solution .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#ParticleSwarmOptimization
+aib:ParticleSwarmOptimization rdf:type owl:Class ;
+                              rdfs:subClassOf aib:SearchAlgoritm .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#Problem
+aib:Problem rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#RandomizedSearch
+aib:RandomizedSearch rdf:type owl:Class ;
+                     rdfs:subClassOf aib:SearchMethodologies ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty aib:useAlgorithm ;
+                                       owl:someValuesFrom aib:GeneticAlgoritms
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty aib:useAlgorithm ;
+                                       owl:someValuesFrom aib:ParticleSwarmOptimization
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty aib:useAlgorithm ;
+                                       owl:someValuesFrom aib:SimulatedAnealing
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty aib:useAlgorithm ;
+                                       owl:someValuesFrom aib:TabuSearch
+                                     ] .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#RepresentatonOfProblem
+aib:RepresentatonOfProblem rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#SearchAlgoritm
+aib:SearchAlgoritm rdf:type owl:Class ;
+                   rdfs:subClassOf aib:AIAlgoritm .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#SearchMethodologies
+aib:SearchMethodologies rdf:type owl:Class ;
+                        rdfs:subClassOf aib:ArtificialIntelligence .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#SearchPartialObservations
+aib:SearchPartialObservations rdf:type owl:Class ;
+                              rdfs:subClassOf aib:SearchMethodologies ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty aib:useAlgorithm ;
+                                                owl:someValuesFrom aib:AndOrSearch
+                                              ] .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#SimulatedAnealing
+aib:SimulatedAnealing rdf:type owl:Class ;
+                      rdfs:subClassOf aib:SearchAlgoritm .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#Solution
+aib:Solution rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#TabuSearch
+aib:TabuSearch rdf:type owl:Class ;
+               rdfs:subClassOf aib:SearchAlgoritm .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#UniformCostSearch
+aib:UniformCostSearch rdf:type owl:Class ;
+                      rdfs:subClassOf aib:SearchAlgoritm .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#UninformedSearchAlgorithms
+aib:UninformedSearchAlgorithms rdf:type owl:Class ;
+                               rdfs:subClassOf aib:DiscreteSpaceSearch ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty aib:useAlgorithm ;
+                                                 owl:someValuesFrom aib:BidirectionalSearch
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty aib:useAlgorithm ;
+                                                 owl:someValuesFrom aib:BreadthFirstSearch
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty aib:useAlgorithm ;
+                                                 owl:someValuesFrom aib:DepthFirstSearch
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty aib:useAlgorithm ;
+                                                 owl:someValuesFrom aib:UniformCostSearch
+                                               ] .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#A*Search
+<http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#A*Search> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf aib:SearchAlgoritm .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#KnowledgeRepresentation&Reasoning
+<http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#KnowledgeRepresentation&Reasoning> rdf:type owl:Class ;
+                                                                                            rdfs:subClassOf aib:ArtificialIntelligence .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#Planning&Scheduling
+<http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#Planning&Scheduling> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf aib:ArtificialIntelligence .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#WolfGoatCabbageProblem
+aib:WolfGoatCabbageProblem rdf:type owl:NamedIndividual ,
+                                    aib:Problem .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( aib:ComputerVision
+                aib:Control_methods
+                aib:DistributedAI
+                aib:MachineLearning
+                aib:NaturalLanguageProcessing
+                aib:SearchMethodologies
+                <http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#KnowledgeRepresentation&Reasoning>
+                <http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#Planning&Scheduling>
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
