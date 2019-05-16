@@ -1,1 +1,12 @@
-simulations of several A.I. algorithms
+Simulations of several A.I. algorithms
+- Search Tehniques in a random maze:
+  - Breadth-first search
+  - Depth-first search
+  - Bidirectional Search
+  - Hill Climbing
+- Genetic Algorithm in Travelling salesman problem using a instance of 51 cities and a population of 100
+chromosomes
+- Gomoku - Game Playing - Alpha–beta pruning
+- Particle Swarm Optimization
+
+
