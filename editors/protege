@@ -1,0 +1,36 @@
+Protege is a free, java-based, open-source platform which provides tools to construct domain models and knowledge-based applications 
+with ontologies [1]
+
+* resurse hardware/software
+- se poate instala pe Windows, Mac OS X, Linux
+- este disponibil sub forma unei arhive downloadabile care poate include si JRE (Java Runtime Environment); pentru versiunea 5.5.0 
+pentru Windows, arhiva are marimea de 117 MB, ajungand dupa despachetare la 218 MB. Nu necesita instalare.
+- memoria utilizata este limitata la 444 MB. 
+
+* suport pentru import/export 
+- ofera posibilitatea de a importa ontologii in diverse formate de pe disk sau de pe web specificand adresa URL.
+- exportul ontologiei se poate face in mai multe formate: RDF/XML, Turtle, OWL/XML, OWL Functional, Manchester OWL, OBO, LaTex, Jason-
+LD
+- implicit ofera suport si pentru conversia intre diverse formate
+
+* suport pentru vizualizari
+- OntoGraf ofera vizualizari in cateva forme cu posibilitatea de export ca imagine sau ca DOT.
+- plug-in pentru diverse alte vizualizari 
+
+* suport pentru reasoning
+- dispune de un reasoner preinstalat (HermiT) dar se pot utiliza si alte reasoners (plug-in pentru Pellet, Fact++, RacerPro)  
+
+* suport pentru interogari
+- se pot face DL query (ce fel de expresii sunt valabile ??????) 
+- suport sparql ???
+
+- sunt disponibile numeroase plug-in, cateva se pot instala direct din aplicatie, celelalte ???????
+
+* usurinta utilizarii
+
+
+
+
+
+
+[1] https://protege.stanford.ed
