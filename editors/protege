@@ -15,19 +15,27 @@ LD
 
 * suport pentru vizualizari
 - OntoGraf ofera vizualizari in cateva forme cu posibilitatea de export ca imagine sau ca DOT.
-- plug-in pentru diverse alte vizualizari 
+- plug-in pentru diverse alte vizualizari ce se pot salva ca imagine
 
 * suport pentru reasoning
-- dispune de un reasoner preinstalat (HermiT) dar se pot utiliza si alte reasoners (plug-in pentru Pellet, Fact++, RacerPro)  
+- dispune de un reasoner preinstalat (HermiT) dar se pot utiliza si alte reasoners (plug-in pentru Pellet, Fact++, RacerPro). Am instalat pluginul pentru Pellet si l-am din mebiu ca reasoner.
+- ofera explicatii pentru inferentele realizate
 
 * suport pentru interogari
 - se pot face DL query (ce fel de expresii sunt valabile ??????) 
 - suport sparql ???
 
-- sunt disponibile numeroase plug-in, cateva se pot instala direct din aplicatie, celelalte ???????
+- sunt disponibile numeroase plug-in, cateva se pot instala direct din aplicatie, celelalte pot fi descarcate si copiate in directorul plugins al aplicatiei
+
+* alte facilitati
+- genereaza automat documentatia in format html
+- genereaza automat cod java (necesara la ?)
 
 * usurinta utilizarii
+- refactoring 
+- Am instalat pluginul pentru Pellet si l-am din mebiu ca reasoner.
 
+- uneori se blocheaza
 
 
 
