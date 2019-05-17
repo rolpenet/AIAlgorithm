@@ -23,7 +23,8 @@ LD
 
 * suport pentru interogari
 - se pot face DL query (ce fel de expresii sunt valabile ??????) 
-- suport sparql ???
+- suport sparql ??? de testat daca suporta Owl 2
+- SQWRL is an extension of OWL/SWRL de vazut ce e cu el ????
 
 - sunt disponibile numeroase plug-in, cateva se pot instala direct din aplicatie, celelalte pot fi descarcate si copiate in directorul plugins al aplicatiei
 
