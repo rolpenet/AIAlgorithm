@@ -11,11 +11,11 @@ pentru Windows, arhiva are marimea de 117 MB, ajungand dupa despachetare la 218 
 - ofera posibilitatea de a importa ontologii in diverse formate de pe disk sau de pe web specificand adresa URL.
 - exportul ontologiei se poate face in mai multe formate: RDF/XML, Turtle, OWL/XML, OWL Functional, Manchester OWL, OBO, LaTex, Jason-
 LD
-- implicit ofera suport si pentru conversia intre diverse formate
+- implicit ofera suport si pentru conversia intre diverse formate. exemplu cu import/export
 
 * suport pentru vizualizari
 - OntoGraf ofera vizualizari in cateva forme cu posibilitatea de export ca imagine sau ca DOT.
-- plug-in pentru diverse alte vizualizari ce se pot salva ca imagine
+- plug-in pentru diverse alte vizualizari ce se pot salva ca imagine. exemplu cu ....
 
 * suport pentru reasoning
 - dispune de un reasoner preinstalat (HermiT) dar se pot utiliza si alte reasoners (plug-in pentru Pellet, Fact++, RacerPro). Am instalat pluginul pentru Pellet si l-am din mebiu ca reasoner.
