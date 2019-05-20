@@ -18,6 +18,7 @@ LD
 - plug-in pentru diverse alte vizualizari ce se pot salva ca imagine. exemplu cu ....
 
 * suport pentru reasoning
+
 - dispune de un reasoner preinstalat (HermiT) dar se pot utiliza si alte reasoners (plug-in pentru Pellet, Fact++, RacerPro). Am instalat pluginul pentru Pellet si l-am din mebiu ca reasoner.
 - ofera explicatii pentru inferentele realizate
 
