@@ -19,7 +19,8 @@ LD
 
 * suport pentru reasoning
 
-- dispune de un reasoner preinstalat (HermiT) dar se pot utiliza si alte reasoners (plug-in pentru Pellet, Fact++, RacerPro). Am instalat pluginul pentru Pellet si l-am din mebiu ca reasoner.
+- dispune de un reasoner preinstalat (HermiT) dar se pot utiliza si alte reasoners (plug-in pentru Pellet, Fact++, RacerPro).HermiT uses direct semantics and passes all OWL 2 conformance tests for direct semantics reasoners[3]. Am instalat pluginul pentru Pellet si l-am din mebiu ca reasoner.
+- reasoner se poate porni sau opri. Daca este pornit va verifica daca ontologia este consistenta
 - ofera explicatii pentru inferentele realizate
 
 * suport pentru interogari
@@ -41,7 +42,7 @@ LD
 
 
 
-- de trecut la capitolul limbje de interogare. 
+- de trecut la capitolul limbaje de interogare. 
 SWRL (Semantic Web Rule Language) is an expressive OWL-based rule language. de vazut ce e cu el ????[2]
 
 
@@ -53,3 +54,4 @@ SWRL (Semantic Web Rule Language) is an expressive OWL-based rule language. de v
 
 [1] https://protege.stanford.ed
 [2] SQWRL - a query language for OWL - Martin O'Connor, Amar Das - 
+[3] http://www.hermit-reasoner.com/
