@@ -32,7 +32,7 @@ HermiT uses direct semantics and passes all OWL 2 conforman direct semantics rea
 - it can generate java code with classes and properties from ontology
 - many plug-ins are available, some can be installed directly from the application, others can be downloaded and copied to the plug-in directory of the application
 
-* usurinta utilizarii
+* usability
 > creating an ontology
 - when creating an ontology, it first establishes the IRI address of ontology with the ability to specify the version of ontology.
 - In terms of adding prefixes, the application helps us by providing a list with the most used prefixes (owl, rdf, rdfs, xml, xsd)
