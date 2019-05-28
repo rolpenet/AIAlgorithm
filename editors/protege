@@ -1,48 +1,64 @@
 Protege is a free, java-based, open-source platform which provides tools to construct domain models and knowledge-based applications 
-with ontologies [1]
+with ontologies [1]. it has numerous plug-in to extend the functionality of the application.
 
-* resurse hardware/software
-- se poate instala pe Windows, Mac OS X, Linux
-- este disponibil sub forma unei arhive downloadabile care poate include si JRE (Java Runtime Environment); pentru versiunea 5.5.0 
-pentru Windows, arhiva are marimea de 117 MB, ajungand dupa despachetare la 218 MB. Nu necesita instalare.
-- memoria utilizata este limitata la 444 MB. 
+* hardware/software resources
+- it can be installed on Windows, Mac OS X, Linux
+- is available as a downloadable archive that can also include JRE (Java Runtime Environment); in the case of version 5.5.0
+for Windows, the archive has a size of 117 MB, reaching after unpacking to 218 MB. No installation required.
+- the memory used is limited to 444 MB. 
 
 * suport pentru import/export 
-- ofera posibilitatea de a importa ontologii in diverse formate de pe disk sau de pe web specificand adresa URL.
-- exportul ontologiei se poate face in mai multe formate: RDF/XML, Turtle, OWL/XML, OWL Functional, Manchester OWL, OBO, LaTex, Jason-
+- offers the ability to import ontologies in various formats from disk or web or by specifying the URL.
+- the export of ontology can be done in several formats: RDF / XML, Turtle, OWL / XML, OWL Functional, Manchester OWL, OBO, LaTex, Jason-
 LD
-- implicit ofera suport si pentru conversia intre diverse formate. exemplu cu import/export
+- it also offers support for conversion between different formats. For example, you can import a file in RDF / XML format and then export it to Turtle format. 
 
-* suport pentru vizualizari
-- OntoGraf ofera vizualizari in cateva forme cu posibilitatea de export ca imagine sau ca DOT.
-- plug-in pentru diverse alte vizualizari ce se pot salva ca imagine. exemplu cu ....
+* support for graphical visualization
+- OntoGraf offers visualizations in several forms with the possibility of exporting as a picture or as a DOT.
+- has a number of plug-in for various other views that can be saved as an image. 
 
-* suport pentru reasoning
+* support for reasoning
+- has a preinstalled reasoner (HermiT) but other reasoners can also be used (plug-in for Pellet, Fact++, RacerPro).
+HermiT uses direct semantics and passes all OWL 2 conforman direct semantics reasoners[3]. 
+- verifies the consistency of ontology and extracts by inference other relationships between classes. 
+- the reasoner can start or stop. If it is turned on, it will check if the ontology is consistent.
 
-- dispune de un reasoner preinstalat (HermiT) dar se pot utiliza si alte reasoners (plug-in pentru Pellet, Fact++, RacerPro).HermiT uses direct semantics and passes all OWL 2 conformance tests for direct semantics reasoners[3]. 
-Verifica consistenta ontologiei si extrage prin inferenta alte relatii intre clase. 
-
-- reasoner se poate porni sau opri. Daca este pornit va verifica daca ontologia este consistenta
-- ofera explicatii pentru inferentele realizate
-
-* suport pentru interogari
-- se pot face DL query (ce fel de expresii sunt valabile ??????) 
-- suport sparql ??? de testat daca suporta Owl 2
+* support for queries 
+- there are three possibilities for querying ontology: DL query, existential query, SPARQL query. 
 - se pot face interogari in SQWRL care is an extension of OWL/SWRL. 
 
-- sunt disponibile numeroase plug-in, cateva se pot instala direct din aplicatie, celelalte pot fi descarcate si copiate in directorul plugins al aplicatiei
-
-* alte facilitati
-- genereaza automat documentatia in format html
-- genereaza automat cod java (necesara la ?)
+* other facilities
+- it can generate documentation in HTML format.
+- it can generate java code with classes and properties from ontology
+- many plug-ins are available, some can be installed directly from the application, others can be downloaded and copied to the plug-in directory of the application
 
 * usurinta utilizarii
-- refactoring 
+> creating an ontology
+- when creating an ontology, it first establishes the IRI address of ontology with the ability to specify the version of ontology.
+- In terms of adding prefixes, the application helps us by providing a list with the most used prefixes (owl, rdf, rdfs, xml, xsd)
+with the possibility of deleting or adding prefixes. 
+- in the same view, annotations can also be passed (creator of ontology, ontology version, compatibility with other versions, license information)
+
+> creating classes
+- surprises by intuitive way of creating / adding classes and subclasses.  
+- select a class and use one of the options - add a class on the same level, a subclass, or delete the class.
+- you can directly create a hierarchy of classes using indentation, one class per row, so you can build a classification without knowledge in ontology.
+
+
+> adding object properties 
+
+
+>importing an ontology 
+TO DO
 
 >reasoning 
 - Pentru a face inferente si a verifica consistenta ontologiei reasonerul trebuie pornit. Pentru relatiile inferate sau pentru inconsistenta ontologiei, reasonerul ofera posibilitatea vizualizarii deductiilor utilizate.
 - Pnetru a lua in calcul modificarile efectuate asupra ontologiei, exista optiunea de sincronizare. Se pot configura si tipurile de inferente afisate.
 - Am testat si posibilitatea de a utiliza si un alt reasoner - de exmplu am instalat pluginul pentru Pellet si l-am selectat din meniu ca reasoner. 
+
+>altele
+-Protege also offers a number of metrics - the number of axioms, classes, subclasses, properties, subproperties.
+
 
 - uneori se blocheaza
 
@@ -61,3 +77,4 @@ SWRL (Semantic Web Rule Language) is an expressive OWL-based rule language. de v
 [1] https://protege.stanford.ed
 [2] SQWRL - a query language for OWL - Martin O'Connor, Amar Das - 
 [3] http://www.hermit-reasoner.com/
+[4] https://github.com/HajoRijgersberg/OM
