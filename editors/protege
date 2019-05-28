@@ -19,7 +19,9 @@ LD
 
 * suport pentru reasoning
 
-- dispune de un reasoner preinstalat (HermiT) dar se pot utiliza si alte reasoners (plug-in pentru Pellet, Fact++, RacerPro).HermiT uses direct semantics and passes all OWL 2 conformance tests for direct semantics reasoners[3]. Am instalat pluginul pentru Pellet si l-am din mebiu ca reasoner.
+- dispune de un reasoner preinstalat (HermiT) dar se pot utiliza si alte reasoners (plug-in pentru Pellet, Fact++, RacerPro).HermiT uses direct semantics and passes all OWL 2 conformance tests for direct semantics reasoners[3]. 
+Verifica consistenta ontologiei si extrage prin inferenta alte relatii intre clase. 
+
 - reasoner se poate porni sau opri. Daca este pornit va verifica daca ontologia este consistenta
 - ofera explicatii pentru inferentele realizate
 
@@ -36,7 +38,11 @@ LD
 
 * usurinta utilizarii
 - refactoring 
-- Am instalat pluginul pentru Pellet si l-am din mebiu ca reasoner.
+
+>reasoning 
+- Pentru a face inferente si a verifica consistenta ontologiei reasonerul trebuie pornit. Pentru relatiile inferate sau pentru inconsistenta ontologiei, reasonerul ofera posibilitatea vizualizarii deductiilor utilizate.
+- Pnetru a lua in calcul modificarile efectuate asupra ontologiei, exista optiunea de sincronizare. Se pot configura si tipurile de inferente afisate.
+- Am testat si posibilitatea de a utiliza si un alt reasoner - de exmplu am instalat pluginul pentru Pellet si l-am selectat din meniu ca reasoner. 
 
 - uneori se blocheaza
 
