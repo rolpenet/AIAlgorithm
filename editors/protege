@@ -43,7 +43,7 @@ with the possibility of deleting or adding prefixes.
 - surprises by intuitive way of creating / adding classes and subclasses.  
 - select a class and use one of the options - add a class on the same level, a subclass, or delete the class.
 - you can directly create a hierarchy of classes using indentation, one class per row, so you can build a classification without knowledge in ontology.
-
+- in the annotation view can be made a description of the class. The application provides several owl and rdfs items for this purpose.
 
 > adding object properties 
 
