@@ -19,13 +19,13 @@ LD
 
 * support for reasoning
 - has a preinstalled reasoner (HermiT) but other reasoners can also be used (plug-in for Pellet, Fact++, RacerPro).
-HermiT uses direct semantics and passes all OWL 2 conforman direct semantics reasoners[3]. 
+HermiT uses direct semantics and passes all OWL 2 conformance tests for direct semantics reasoners[3].
 - verifies the consistency of ontology and extracts by inference other relationships between classes. 
 - the reasoner can start or stop. If it is turned on, it will check if the ontology is consistent.
 
 * support for queries 
 - there are three possibilities for querying ontology: DL query, existential query, SPARQL query. 
-- se pot face interogari in SQWRL care is an extension of OWL/SWRL. 
+- query possibilities can be extended - by installing a plug-in, you can use SQWRL for quering which is an extension of OWL / SWRL. 
 
 * other facilities
 - it can generate documentation in HTML format.
@@ -42,22 +42,46 @@ with the possibility of deleting or adding prefixes.
 > creating classes
 - surprises by intuitive way of creating / adding classes and subclasses.  
 - select a class and use one of the options - add a class on the same level, a subclass, or delete the class.
+- you can duplicate a class and modify it.
 - you can directly create a hierarchy of classes using indentation, one class per row, so you can build a classification without knowledge in ontology.
 - in the annotation view can be made a description of the class. The application provides several owl and rdfs items for this purpose.
 
 > adding object properties 
+- you can choose the domain and range with access to the class hierarchy.
+- you can check the characteristics of the property: functional, transitive, symmetric, etc.
+- you can specify certain properties - Equivalent With, SubProperty Of, Disjoint With, Inverse Of
 
+> adding data properties
+-  resembles object properties - you can specify scope and range, with the difference that at range you can choose the data type from a predefined list or you can enter expressions.
 
->importing an ontology 
+> adding individuals
+- you can choose the type in the hierarchy of classes, you can add object property assertion and date property assertion.
+
+>importing an ontology
 TO DO
 
->reasoning 
-- Pentru a face inferente si a verifica consistenta ontologiei reasonerul trebuie pornit. Pentru relatiile inferate sau pentru inconsistenta ontologiei, reasonerul ofera posibilitatea vizualizarii deductiilor utilizate.
-- Pnetru a lua in calcul modificarile efectuate asupra ontologiei, exista optiunea de sincronizare. Se pot configura si tipurile de inferente afisate.
+> reasoning
+- to make inferencies and check the consistency of the ontology, the reasoner must be started. For infered relationships or inconsistency of ontology, the reasoner provides the possibility to visualize the deductions used.
+- To take into account changes made to ontology, there is a synchronization option. You can also configure the types of inferences displayed.
 - Am testat si posibilitatea de a utiliza si un alt reasoner - de exmplu am instalat pluginul pentru Pellet si l-am selectat din meniu ca reasoner. 
+- I also tested the possibility to use another reasoner - for example I installed the Pellet plugin and selected it from the menu as a reasoner
 
->altele
--Protege also offers a number of metrics - the number of axioms, classes, subclasses, properties, subproperties.
+> querying
+- querying requires knowledge of the Manchester syntax or the SPARQL language.
+- DL query uses Manchester Syntax to query ontology with the possibility to add results to ontology. You can query superclasses, equivalent classes, subclasses, and instances.
+- SPARQL query - you find here the most common prefixes and the SELECT skeleton with a WHERE clause, which facilitates the query.    
+
+> visualization
+- in Protege default visualization tool is OntoGraf that provides a image of classes and their relationships;
+In OntoGraf, the classes of interest are added by doubleclick on the class of the class hierarchy. With various mouse actions, you can see details about a particular class, the relationship between two classes, you can add subclasses and superclasses to a selected class.
+You can choose the layout of the graphic elements in space (radial, spring, tree horizontal, tree vertical etc.). The graph can be saved as an image, including as a DOT (graph description language).
+
+> others
+- Protege also offers a number of metrics - the number of axioms, classes, subclasses, properties, subproperties.
+- export option OWLDoc creates and exports documentation as HTML files that can be viewed in a browser.
+- there is an option to generates Java code for each class
+- refactoring - you can rename a class, move a class with all subclasses by drag and drop, rename an IRI.
+
 
 
 - uneori se blocheaza
@@ -78,3 +102,94 @@ SWRL (Semantic Web Rule Language) is an expressive OWL-based rule language. de v
 [2] SQWRL - a query language for OWL - Martin O'Connor, Amar Das - 
 [3] http://www.hermit-reasoner.com/
 [4] https://github.com/HajoRijgersberg/OM
+
+
+WebProtege
+
+* hardware/software resources
+
+
+* suport pentru import/export
+
+
+* support for graphical visualization
+
+
+* support for reasoning
+
+
+* support for queries
+
+
+* other facilities
+
+
+* usability
+> creating an ontology
+
+
+> creating classes
+
+> adding object properties
+
+> adding data properties
+
+> adding individuals
+
+> importing an ontology
+
+> reasoning
+
+> querying
+
+> visualization
+
+> others
+
+
+
+OWLGRed
+
+* hardware/software resources
+is available as a downloadable archive (.zip); in the case of version 1.6.9.3.
+for Windows, the archive has a size of 67.4 MB, reaching after unpacking to 167 MB. No installation required.
+
+* suport pentru import/export
+- offers the ability to import ontologies in various formats from disk or web or by specifying the URL.
+- the export of ontology can be done in several formats: RDF / XML, Turtle, OWL / XML, OWL Functional, Manchester OWL, OBO, LaTex, Jason-
+LD
+
+* support for graphical visualization
+- offers visualizations in several forms with the possibility of exporting as a picture or as a DOT.
+
+* support for reasoning
+
+
+* support for queries
+
+
+* other facilities
+
+
+* usability
+> creating an ontology
+
+
+> creating classes
+
+> adding object properties
+
+> adding data properties
+
+> adding individuals
+
+> importing an ontology
+
+> reasoning
+
+> querying
+
+> visualization
+
+> others
+
