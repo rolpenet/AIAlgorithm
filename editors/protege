@@ -103,48 +103,61 @@ SWRL (Semantic Web Rule Language) is an expressive OWL-based rule language. de v
 [3] http://www.hermit-reasoner.com/
 [4] https://github.com/HajoRijgersberg/OM
 
+webprotege
 
-WebProtege
+> hardware/software resources
+- only a web browser, email account, and internet access is required
 
-* hardware/software resources
+> suport pentru import/export
+- import ontology - you can import ontologies by providing a URL or a local zip archive
+- sharing - the project can be made public or shared with others who can view, comment or edit.
 
-
-* suport pentru import/export
-
-
-* support for graphical visualization
-
-
-* support for reasoning
+> support for graphical visualization
 
 
-* support for queries
+> support for reasoning
 
 
-* other facilities
+> support for queries
 
 
-* usability
+> other facilities
+- history with modificarile efectuate
+
+> usability
+- UI este organizat pe tabs cele mai importante fiind clasele, proprietatile, individuals, query. La majoritatea box de completat, aplicatia vine cu sugestii pe masura ce incepi sa scrii, ceea ce usureaza munca si evita posibilele erori de scriere. De asemenea aplicatia este gandita sa se plieze pe fluxurile utilizate de utilizatori pentru crearea diverselor elemente ale ontologiei - in functie de stilul de lucru, clasele, proprietatile si indivizii pot fi creati in diverse moduri.  
+
 > creating an ontology
-
+- you can create an ontology from scratch or from existing sources.
 
 > creating classes
+- se poate completa denumirea clasei, annotation(se pot alege dintr-o lista presatbilitat cele mai frecvente)
+- se pot trece superclasele (parents) sau proprietatile (relationship). Daca proprietatile nu exista, le creaza. La fel daca clasa la caree face referire proprietatea nu exista, o creaza. 
+- clasele se pot adauga, muta sau sterge 
 
 > adding object properties
+- se poate trece denumirea proprietatii, annotations, domain si range
+- proprietatile se pot adauga, muta sau sterge
 
 > adding data properties
+- se poate trece denumirea proprietatii, annotations, domain si range
+- se poate bifa daca proprietarea este sau nu functionala
+- proprietatile se pot adauga, muta sau sterge
+- daca clasa la care face referire (domeniul) sau tipul de data (range) nu exista, aplicatia cu acordul utilizatorului le creaza.  
 
 > adding individuals
+- pentru stabilirea tipului unui individ sunt date mai multe variante : daca am creat o clasa si vrem sa-i adaugam indivizi folosim butonul Sync Selection; daca adaugam ulterior indivizii, putem adauga tipul din ierarhia de clase. Mai sunt si variantele: jump to parent, jump to child, jump to sibling sau putem cauta clasa.  
 
 > importing an ontology
-
-> reasoning
+- pentru a importa o ontologie stocata pe disk trebuie sa furnizam o arhiva zip cu un document numit root-ontology.owl
 
 > querying
+- 
 
 > visualization
 
 > others
+- sharing - se poate stabili o lista cu users care pot accesa ontologia si ce actiuni pot face: view, comment or edit.
 
 
 
