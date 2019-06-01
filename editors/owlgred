@@ -10,7 +10,7 @@ for Windows, the archive has a size of 67.4 MB, reaching after unpacking to 167 
 LD
 
 * support for graphical visualization
-- offers visualizations in several forms with the possibility of exporting as a picture or as a DOT.
+- offers visualizations in several forms with the possibility of exporting as a picture.
 
 * support for reasoning
 -none
