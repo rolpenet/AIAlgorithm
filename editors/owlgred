@@ -1,0 +1,44 @@
+OWLGRed
+
+* hardware/software resources
+is available as a downloadable archive (.zip); in the case of version 1.6.9.3.
+for Windows, the archive has a size of 67.4 MB, reaching after unpacking to 167 MB. No installation required.
+
+* suport pentru import/export
+- offers the ability to import ontologies in various formats from disk or web or by specifying the URL.
+- the export of ontology can be done in several formats: RDF / XML, Turtle, OWL / XML, OWL Functional, Manchester OWL, OBO, LaTex, Jason-
+LD
+
+* support for graphical visualization
+- offers visualizations in several forms with the possibility of exporting as a picture or as a DOT.
+
+* support for reasoning
+-none
+
+* support for queries
+-none
+
+* other facilities
+
+
+* usability
+> creating an ontology
+
+
+> creating classes
+
+> adding object properties
+
+> adding data properties
+
+> adding individuals
+
+> importing an ontology
+
+> reasoning
+
+> querying
+
+> visualization
+
+> others
