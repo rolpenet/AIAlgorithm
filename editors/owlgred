@@ -1,7 +1,7 @@
 OWLGRed
 
 * hardware/software resources
-is available as a downloadable archive (.zip); in the case of version 1.6.9.3.
+- is available as a downloadable archive (.zip); in the case of version 1.6.9.3.
 for Windows, the archive has a size of 67.4 MB, reaching after unpacking to 167 MB. No installation required.
 
 * suport pentru import/export
@@ -23,15 +23,21 @@ LD
 
 * usability
 > creating an ontology
-
+- intr-un prim view, se poate completa numele ontologiei, prefixul, namespaces, comment si annotation. La annotation se poate alege dintr-o lista elementul dorit si limba.
 
 > creating classes
+- se pot trece numele clasei, clasele echivalente, superclasele, clasele disjoint si keys.
+- aplicatia nu te ajuta in alegea claselor disjoint, claselor echivalente sau superclaselor
+- desi am trecut superclasa, nu apare automat legatura grafica
 
 > adding object properties
+- in stilul grafic caracteristic, daca pentru clase avem boxes, pentru proprietati avem linii (association). Unim cu o linie cele doua clase vizate si apare un view unde putem completa numele proprietatii, anotations, caracteristicile proprietatii (functional ....), proprietatile echivalente, superproprietatile, proprietatile disjoint. in acelasi view, se pot trece si proprietatile inverse (inverseOf) din moment ce aceasta este o proprietate intre aceleasi doua clase.  
 
 > adding data properties
+- se selecteaza box clasei + proprietati. se pot completa numele, tipul, annotations, daca este functionala, proprietatile echivalente, superproprietatile, cele disjoint.
 
 > adding individuals
+- se pot completa numele, tipul (se alege dintr-o lista cu clasele deja create), comment, annotation, diferenta sau echivalenta cu alti indivizi
 
 > importing an ontology
 
@@ -40,5 +46,8 @@ LD
 > querying
 
 > visualization
+- se poate seta fundalul, modul de asezare in spatiu a elementelor grafice
+- la fiecare element grafic se poate seta box type (rectangle, elipse, octogon etc.), culoarea de fundal, fontul, alte efecte  (shadow, 3D). Modificarile se pot aplica numai elementului selectat sau tuturor elementelor de acelasi tip.
+- exportul se poate face ca imagine in diferite formate inclusiv SVG.
 
 > others
