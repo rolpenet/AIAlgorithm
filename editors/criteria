@@ -1,2 +1,19 @@
 Criteria considered
 
+> hardware / software requirements
+An application may have higher hardware / software requirements but to offer more facilities with the risk to reduce the number of potential users while, a less demanding application is much more accessible but to offers fewer features. We considered on which operating systems can be installed, installation difficulty, disk space and memory requirements during running, other components that were previously needed on the computer.
+
+> interoperability
+Represents the ability of the application to use and export data from and to other applications. Is about the range of ontology serialization formats for import / export and export of graphical visualization.
+
+> support for graphical visualization
+Graphical visualization for ontology is important to the human user (a picture makes a thousand words) especially when the authors want to present users a more representative image of ontology
+
+> support for reasoning 
+The main functions of a reasoner are to verify the consistency of ontology and to infer new axioms based on existing ones. 
+
+> suport for queries
+As with databases, the possibility of extracting desired data from ontology highlights their usefulness.
+
+> usability
+The ease with which users become familiar with the application interface, how intuitive it is, how easy find the desired item and how customizably is, in generally has effects on the quality of ontology and time of completion. It also counts the options and suggestions offered during use, portability, the ability of other users to participate.
