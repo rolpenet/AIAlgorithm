@@ -8,31 +8,29 @@ webprotege
 - sharing - the project can be made public or shared with others who can view, comment or edit.
 
 > support for graphical visualization
-
+- none
 
 > support for reasoning
-
-
+- none
 > support for queries
 
-
 > other facilities
-- history with modificarile efectuate
+- history with changes made
 
 > usability
-- UI este organizat pe tabs cele mai importante fiind clasele, proprietatile, individuals, query. La majoritatea box de completat, aplicatia vine cu sugestii pe masura ce incepi sa scrii, ceea ce usureaza munca si evita posibilele erori de scriere. De asemenea aplicatia este gandita sa se plieze pe fluxurile utilizate de utilizatori pentru crearea diverselor elemente ale ontologiei - in functie de stilul de lucru, clasele, proprietatile si indivizii pot fi creati in diverse moduri.  
+- UI is organized on tabs, the most important being classes, properties, individuals, query. At most boxes, the application comes with suggestions as you start writing, making it easy to work and avoid possible writing errors. Also, the application is intended to follow the flows used by users to create various elements of ontology - Depending on the style of work, classes, properties, and individuals can be created in different ways.  
 
 > creating an ontology
 - you can create an ontology from scratch or from existing sources.
 
 > creating classes
-- se poate completa denumirea clasei, annotation(se pot alege dintr-o lista presatbilitat cele mai frecvente)
-- se pot trece superclasele (parents) sau proprietatile (relationship). Daca proprietatile nu exista, le creaza. La fel daca clasa la caree face referire proprietatea nu exista, o creaza. 
-- clasele se pot adauga, muta sau sterge 
+- it is possible to fill in the name of the class, annotation (you can choose from a most frequently used preset list)
+- we can override superclasele (parents) or properties (relationship). If the properties do not exist, it creates them. Similarly, if the class to which the property refers does not exist, it creates it. 
+- classes can be added, moved or deleted
 
 > adding object properties
-- se poate trece denumirea proprietatii, annotations, domain si range
-- proprietatile se pot adauga, muta sau sterge
+- you can pass the property name, annotations, domain and range
+- properties can be added, moved or deleted
 
 > adding data properties
 - se poate trece denumirea proprietatii, annotations, domain si range
