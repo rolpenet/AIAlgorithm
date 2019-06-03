@@ -33,16 +33,16 @@ webprotege
 - properties can be added, moved or deleted
 
 > adding data properties
-- se poate trece denumirea proprietatii, annotations, domain si range
-- se poate bifa daca proprietarea este sau nu functionala
-- proprietatile se pot adauga, muta sau sterge
-- daca clasa la care face referire (domeniul) sau tipul de data (range) nu exista, aplicatia cu acordul utilizatorului le creaza.  
+- you can pass the property name, annotations, domain and range
+- you can check whether the property is functional or not
+- properties can be added, moved or deleted
+- if the class that it refers to (domain) or the type of range does not exist, the application with the user's consent creates them.
 
 > adding individuals
-- pentru stabilirea tipului unui individ sunt date mai multe variante : daca am creat o clasa si vrem sa-i adaugam indivizi folosim butonul Sync Selection; daca adaugam ulterior indivizii, putem adauga tipul din ierarhia de clase. Mai sunt si variantele: jump to parent, jump to child, jump to sibling sau putem cauta clasa.  
+- to determine the type of an individual are given several variants: if we created a class and we want to add individuals we use the Sync Selection button; if we add individuals later, we can add the type from the hierarchy of classes. There are also variants: jump to parent, jump to child, jump to sibling or we can search for class.
 
 > importing an ontology
-- pentru a importa o ontologie stocata pe disk trebuie sa furnizam o arhiva zip cu un document numit root-ontology.owl
+- to import an ontology stored on disk we must provide a zip archive with a document called root-ontology.owl
 
 > querying
 - 
@@ -50,4 +50,4 @@ webprotege
 > visualization
 
 > others
-- sharing - se poate stabili o lista cu users care pot accesa ontologia si ce actiuni pot face: view, comment or edit.
+- sharing - you can set up a list of users who can access ontology and what actions they can do: view, comment or edit.
