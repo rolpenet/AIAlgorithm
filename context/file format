@@ -1,0 +1,1 @@
+OBO format is a popular ontology file format. It can express a subset of the description logic language OWL-DL 2.0 but in addition has standard syntax for representing important classes of meta-data including as synonyms, references to publications and deprecated IDs. It is designed to be human readable and editable, easy to parse, easy to extend and to have minimal redundancy
