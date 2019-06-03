@@ -1,5 +1,4 @@
-Protege is a free, java-based, open-source platform which provides tools to construct domain models and knowledge-based applications 
-with ontologies [1]. it has numerous plug-in to extend the functionality of the application.
+Protege
 
 * hardware/software resources
 - it can be installed on Windows, Mac OS X, Linux
@@ -9,13 +8,12 @@ for Windows, the archive has a size of 117 MB, reaching after unpacking to 218 M
 
 * interoperability 
 - offers the ability to import ontologies in various formats from disk or web or by specifying the URL.
-- the export of ontology can be done in several formats: RDF / XML, Turtle, OWL / XML, OWL Functional, Manchester OWL, OBO, LaTex, Jason-
-LD
+- the export of ontology can be done in several formats: RDF / XML, Turtle, OWL / XML, OWL Functional, Manchester OWL, OBO, LaTex, Jason-LD
 - it also offers support for conversion between different formats. For example, you can import a file in RDF / XML format and then export it to Turtle format. 
 
 * support for graphical visualization
 - OntoGraf offers visualizations in several forms with the possibility of exporting as a picture or as a DOT.
-- has a number of plug-in for various other views that can be saved as an image. 
+- has a number of plug-in for various other views that can be saved as an image. For example, VOWL 
 
 * support for reasoning
 - has a preinstalled reasoner (HermiT) but other reasoners can also be used (plug-in for Pellet, Fact++, RacerPro).
@@ -35,13 +33,12 @@ HermiT uses direct semantics and passes all OWL 2 conformance tests for direct s
 * usability
 > creating an ontology
 - when creating an ontology, it first establishes the IRI address of ontology with the ability to specify the version of ontology.
-- In terms of adding prefixes, the application helps us by providing a list with the most used prefixes (owl, rdf, rdfs, xml, xsd)
-with the possibility of deleting or adding prefixes. 
-- in the same view, annotations can also be passed (creator of ontology, ontology version, compatibility with other versions, license information)
+- In terms of adding prefixes, the application helps us by providing a list with the most used prefixes (owl, rdf, rdfs, xml, xsd) with the possibility of deleting or adding new prefixes. 
+- in the same view, annotations can also be added. The application helps us by providing a list of options (owl:versionInfo, rdfs: label, rdfs:comment, rdfs:isDefinedBy, rdfs:seeAlso) .
 
 > creating classes
 - surprises by intuitive way of creating / adding classes and subclasses.  
-- select a class and use one of the options - add a class on the same level, a subclass, or delete the class.
+- select a class and use one of the options - add a class on the same level (sibling ), a subclass, or delete the class.
 - you can duplicate a class and modify it.
 - you can directly create a hierarchy of classes using indentation, one class per row, so you can build a classification without knowledge in ontology.
 - in the annotation view can be made a description of the class. The application provides several owl and rdfs items for this purpose.
