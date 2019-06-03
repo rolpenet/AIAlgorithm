@@ -1,1 +1,10 @@
-OBO format is a popular ontology file format. It can express a subset of the description logic language OWL-DL 2.0 but in addition has standard syntax for representing important classes of meta-data including as synonyms, references to publications and deprecated IDs. It is designed to be human readable and editable, easy to parse, easy to extend and to have minimal redundancy
+Ontologies can be expressed using different syntaxes:
+ - functional-style syntax - is generally used by OWL tools designers for specifications.
+ - RDF/XML - although it's difficult to read by people, is the only syntax that has to be supported by OWL tools.
+ - Manchester syntax - is a much easier to read and write representation, and aims to use it in editing ontologies in class expression from various OWL tools.[7]
+ - Terse RDF Triple Language (Turtle) - is a series of triple semantics: subject - predicate - object, widely used by owl tools.
+ - Jason-LD - is based on Json format and tries to encompass in this Linked Data format.[8]
+ - OBO format - is a popular ontology file format. It can express a subset of the description logic language OWL-DL 2.0 but in addition has standard syntax for representing important classes of meta-data including as synonyms, references to publications and deprecated IDs. It is designed to be human readable and editable, easy to parse, easy to extend and to have minimal redundancy[6]
+ - LaTeX is a document preparation system, based on TeX. Ontologies may be serialized in LaTeX for ease of reading, publication, etc.[1]
+ 
+ [8] JSON for Linking Data https://json-ld.org/
