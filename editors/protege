@@ -7,7 +7,7 @@ with ontologies [1]. it has numerous plug-in to extend the functionality of the 
 for Windows, the archive has a size of 117 MB, reaching after unpacking to 218 MB. No installation required.
 - the memory used is limited to 444 MB. 
 
-* suport pentru import/export 
+* interoperability 
 - offers the ability to import ontologies in various formats from disk or web or by specifying the URL.
 - the export of ontology can be done in several formats: RDF / XML, Turtle, OWL / XML, OWL Functional, Manchester OWL, OBO, LaTex, Jason-
 LD
