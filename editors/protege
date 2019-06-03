@@ -8,7 +8,7 @@ for Windows, the archive has a size of 117 MB, reaching after unpacking to 218 M
 
 * interoperability 
 - offers the ability to import ontologies in various formats from disk or web or by specifying the URL.
-- the export of ontology can be done in several formats: RDF / XML, Turtle, OWL / XML, OWL Functional, Manchester OWL, OBO, LaTex, Jason-LD
+- the export of ontology can be done in several formats: RDF / XML, Turtle, OWL / XML, OWL Functional, Manchester OWL, OBO, LaTex, Jason-LD. 
 - it also offers support for conversion between different formats. For example, you can import a file in RDF / XML format and then export it to Turtle format. 
 
 * support for graphical visualization
@@ -99,6 +99,7 @@ SWRL (Semantic Web Rule Language) is an expressive OWL-based rule language. de v
 [2] SQWRL - a query language for OWL - Martin O'Connor, Amar Das - 
 [3] http://www.hermit-reasoner.com/
 [4] https://github.com/HajoRijgersberg/OM
+[5] https://en.wikipedia.org/wiki/Open_Biomedical_Ontologies
 
 
 
