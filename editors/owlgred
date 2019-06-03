@@ -22,21 +22,20 @@ for Windows, the archive has a size of 67.4 MB, reaching after unpacking to 167 
 
 * usability
 > creating an ontology
-- intr-un prim view, se poate completa numele ontologiei, prefixul, namespaces, comment si annotation. La annotation se poate alege dintr-o lista elementul dorit si limba.
-
+- in a first view, it is possible to fill in the name of ontology, prefix, namespaces, comment and annotation. In the annotation you can choose from a list the desired item and the language.
 > creating classes
-- se pot trece numele clasei, clasele echivalente, superclasele, clasele disjoint si keys.
-- aplicatia nu te ajuta in alegea claselor disjoint, claselor echivalente sau superclaselor
-- desi am trecut superclasa, nu apare automat legatura grafica
+- the class name, equivalent classes, superclasses, disjoint classes and keys can be passed.
+- the application does not help you choose disjoint classes, equivalent classes or superclasses
+- although we have passed the superclass, the graphic link does not automatically appear
 
 > adding object properties
-- in stilul grafic caracteristic, daca pentru clase avem boxes, pentru proprietati avem linii (association). Unim cu o linie cele doua clase vizate si apare un view unde putem completa numele proprietatii, anotations, caracteristicile proprietatii (functional ....), proprietatile echivalente, superproprietatile, proprietatile disjoint. in acelasi view, se pot trece si proprietatile inverse (inverseOf) din moment ce aceasta este o proprietate intre aceleasi doua clase.  
+- in the characteristic graphic style, if for classes we have boxes, for properties we have lines (association). We unify with a line the two targeted classes and there is a view where we can complete the name of the property, the anotations, the property characteristics (functional ....), the equivalent properties, the superproprietals, the disjoint properties. in the same view, inverse (inverseOf) properties can be passed since it is a property between the same two classes.
 
 > adding data properties
-- se selecteaza box clasei + proprietati. se pot completa numele, tipul, annotations, daca este functionala, proprietatile echivalente, superproprietatile, cele disjoint.
+- select box class + properties. you can fill in the name, type, annotations, if it is functional, equivalent properties, superpropriety, disjoint.
 
 > adding individuals
-- se pot completa numele, tipul (se alege dintr-o lista cu clasele deja create), comment, annotation, diferenta sau echivalenta cu alti indivizi
+- you can fill in the name, type (choose from a list of already created classes), comment, annotation, difference or equivalence with other individuals
 
 > importing an ontology
 
@@ -45,8 +44,8 @@ for Windows, the archive has a size of 67.4 MB, reaching after unpacking to 167 
 > querying
 
 > visualization
-- se poate seta fundalul, modul de asezare in spatiu a elementelor grafice
-- la fiecare element grafic se poate seta box type (rectangle, elipse, octogon etc.), culoarea de fundal, fontul, alte efecte  (shadow, 3D). Modificarile se pot aplica numai elementului selectat sau tuturor elementelor de acelasi tip.
-- exportul se poate face ca imagine in diferite formate inclusiv SVG.
+- you can set the background, how to place the graphic elements in space
+- each box can be set to box type (rectangle, ellipse, octagon, etc.), background color, font, other effects (shadow, 3D). Changes can only apply to the selected item or to all items of the same type.
+- export can be done as image in various formats including SVG.
 
 > others
