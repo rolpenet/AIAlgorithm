@@ -7,7 +7,7 @@ RDFS (Resource Description Framework Schema) can be seen as RDF’s vocabulary d
 SKOS (Simple Knowledge Organization System) is a 'W3C recommendation designed for representation of thesauri, classification schemes, taxonomies, subject-heading systems, or any other type of structured controlled vocabulary'.[14]
 SPARQL (SPARQL Protocol and RDF Query Language) is a semantic query language for databases able to retrieve and manipulate data stored in Resource Description Framework (RDF) format. [12]
 OWL (Web Ontology Language) is a Semantic Web language designed to represent rich and complex knowledge about things, groups of things, and relations between things.[13] ]
-An ontology is a formal description of knowledge in a certain area modeling entities, attributes, relationships and axioms. (described by schema - databases, XML), taxonomies (described by RDFS), lexicon (SKOS modeling), relational system (database schema), axiomatic theory (axioms are used)[11 pg 27-32]
+An ontology is a formal description of knowledge in a certain area modeling entities, attributes, relationships and axioms. Ontologies are of several types, by the description level we have vocabularies (described by schema - databases, XML), taxonomies (described by RDFS), lexicon (SKOS modeling), relational system (database schema), axiomatic theory (axioms are used). By purpose and context of use we have specialized ontologies, general ontologies, intermediate ontologies[11 pg 27-36]
 
 
 
