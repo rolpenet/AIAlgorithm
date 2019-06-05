@@ -1,20 +1,20 @@
-The concept of semantic web was introduced by Tim  Berners-Lee in an article in Scientific American [8]. The technologies underlying this vision, according to the famous cake layer, are : URI, XML, RDF, RDFS, SPARQL, OWL. 
+The concept of semantic web was introduced by Tim  Berners-Lee in an article in Scientific American [8]. The technologies underlying this vision, according to the famous cake layer, are : URI, XML, RDF, RDFS, SKOS, SPARQL, OWL. 
 
 URI (Uniform Resource Identifier) is a unique address through which any web resource can be identified.
 XML (Extensible Markup Language) is a markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable. [9]
 RDF (Resource Description Framework) is a framework for representing information on the Web . The semantic web needed this model to describe any resource in any domain on the web. RDF uses this model to break down information into small pieces in a format known as a triple : subject-predicate-object. Knowledge is expressed as a list of statements, each statement takes the form of this triple [cartea pg 20,25]. The subject, the predicate and the object in this model must be uniquely identified by URI. The subject and the predicate represent resources, while the predicate represents the relationship between them. Multiple triplets can form a graph in which the subjects and objects are the nodes, and the predicate edges. Several common serialization formats are in use, including:Turtle,N-Triples,N-Quads,JSON-LD,N3, RDF/XML, (first standard format for serializing RDF),RDF/JSON. It is also used for building vocabularies. 
-RDFS (Resource Description Framework Schema) can be seen as RDF’s vocabulary description language, provides language constructs that can be used to describe classes, properties within a specific application domain [carte pg 111]. 
+RDFS (Resource Description Framework Schema) can be seen as RDF’s vocabulary description language, provides language constructs that can be used to describe classes, properties within a specific application domain [carte pg 111].
+SKOS (Simple Knowledge Organization System) is a 'W3C recommendation designed for representation of thesauri, classification schemes, taxonomies, subject-heading systems, or any other type of structured controlled vocabulary'.[14]
 SPARQL (SPARQL Protocol and RDF Query Language) is a semantic query language for databases able to retrieve and manipulate data stored in Resource Description Framework (RDF) format. [12]
-OWL (Web Ontology Language) is a Semantic Web language designed to represent rich and complex knowledge about things, groups of things, and relations between things.[13] 
-
-
-O ontologiereprezintăconceptualizareaunuidomeniude cunoaștereîntr-un format destinata fi procesatde calculator, format modelând entități, atribute, relațiișiaxiome
+OWL (Web Ontology Language) is a Semantic Web language designed to represent rich and complex knowledge about things, groups of things, and relations between things.[13] ]
+An ontology is a formal description of knowledge in a certain area modeling entities, attributes, relationships and axioms. (described by schema - databases, XML), taxonomies (described by RDFS), lexicon (SKOS modeling), relational system (database schema), axiomatic theory (axioms are used)[11 pg 27-32]
 
 
 
 [8] Berners-Lee, Tim; James Hendler and Ora Lassila (May 17, 2001). "The Semantic Web". Scientific American Magazine
 [9] https://en.wikipedia.org/wiki/XML
 [10] https://en.wikipedia.org/wiki/Resource_Description_Framework
-[11] web08Taxonomie-RDFSchema-Lexicon-SKOS.pdf 
+[11] web09SemanticWeb-Ontologii-OWL.pdf
 [12] https://en.wikipedia.org/wiki/SPARQL
 [13] https://www.w3.org/OWL/
+[14] https://en.wikipedia.org/wiki/Simple_Knowledge_Organization_System
