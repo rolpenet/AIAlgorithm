@@ -8,7 +8,17 @@ SKOS (Simple Knowledge Organization System) is a 'W3C recommendation designed fo
 SPARQL (SPARQL Protocol and RDF Query Language) is a semantic query language for databases able to retrieve and manipulate data stored in Resource Description Framework (RDF) format. [12]
 OWL (Web Ontology Language) is a Semantic Web language designed to represent rich and complex knowledge about things, groups of things, and relations between things.[13] ]
 An ontology is a formal description of knowledge in a certain area modeling entities, attributes, relationships and axioms. Ontologies are of several types, by the description level we have vocabularies (described by schema - databases, XML), taxonomies (described by RDFS), lexicon (SKOS modeling), relational system (database schema), axiomatic theory (axioms are used). By purpose and context of use we have specialized ontologies, general ontologies, intermediate ontologies[11 pg 27-36]
-An ontology includes: categories, classes, fundamental concepts, properties associated with concepts, relationships between concepts [11 pg 46]. In OWL, axioms are basic statements of classes or individuals and properties.Classes, individuals or properties are also called entities. Expressions are combinations of entities which form complex descriptions about new entities. Expressions are a main reason why we claim OWL has a much more enhanced expressiveness compared to other ontology language such as RDFS [carte 159]. 
+Ontologies can be expressed using different syntaxes:
+ - functional-style syntax - is generally used by OWL tools designers for specifications.
+ - RDF/XML - although it's difficult to read by people, is the only syntax that has to be supported by OWL tools.
+ - Manchester syntax - is a much easier to read and write representation, and aims to use it in editing ontologies in class expression from various OWL tools.[7]
+ - Terse RDF Triple Language (Turtle) - is a series of triple semantics: subject - predicate - object, widely used by owl tools.
+ - Jason-LD - is based on Json format and tries to encompass in this Linked Data format.[15]
+ - OBO format - is a popular ontology file format. It can express a subset of the description logic language OWL-DL 2.0 but in addition has standard syntax for representing important classes of meta-data including as synonyms, references to publications and deprecated IDs. It is designed to be human readable and editable, easy to parse, easy to extend and to have minimal redundancy[6]
+ - LaTeX is a document preparation system, based on TeX. Ontologies may be serialized in LaTeX for ease of reading, publication, etc.[1]
+An ontology includes: categories, classes, fundamental concepts, properties associated with concepts, relationships between concepts [11 pg 46]. In OWL, axioms are basic statements of classes or individuals and properties.Classes, individuals or properties are also called entities. Expressions are combinations of entities which form complex descriptions about new entities. Expressions are a main reason why we claim OWL has a much more enhanced expressiveness compared to other ontology language such as RDFS [carte 159].
+There are 2 versions of OWL: OWL1 and OWL2. 
+class specification - classes designate categories of individuals. Classes are in relationships with the others - subordination, equivalence, disjunction, complementarity, reunion, intersection.
 
 
 
@@ -19,3 +29,4 @@ An ontology includes: categories, classes, fundamental concepts, properties asso
 [12] https://en.wikipedia.org/wiki/SPARQL
 [13] https://www.w3.org/OWL/
 [14] https://en.wikipedia.org/wiki/Simple_Knowledge_Organization_System
+[15] JSON for Linking Data https://json-ld.org/
