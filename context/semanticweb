@@ -18,7 +18,20 @@ Ontologies can be expressed using different syntaxes:
  - LaTeX is a document preparation system, based on TeX. Ontologies may be serialized in LaTeX for ease of reading, publication, etc.[1]
 An ontology includes: categories, classes, fundamental concepts, properties associated with concepts, relationships between concepts [11 pg 46]. In OWL, axioms are basic statements of classes or individuals and properties.Classes, individuals or properties are also called entities. Expressions are combinations of entities which form complex descriptions about new entities. Expressions are a main reason why we claim OWL has a much more enhanced expressiveness compared to other ontology language such as RDFS [carte 159].
 There are 2 versions of OWL: OWL1 and OWL2. 
-class specification - classes designate categories of individuals. Classes are in relationships with the others - subordination, equivalence, disjunction, complementarity, reunion, intersection.
+Class specification - classes designate categories of individuals. Classes are in relationships with the others - subordination, equivalence, disjunction, complementarity, reunion, intersection.
+Properties specification - makes the connection between two classes (object property) or between a class and a data type (data property). Properties may have subproperties in the sense of specialization. properties can have some caracteristics:
+- functional - the property has a single value for each individual.
+- symmetric - the property linking two classes is valid in both directions
+- transitive - if we have a chain of classes linked together with such property, the classes at the ends can also be linked to this property
+- reflexive - describes the relationship of a class with itself
+- inverse functional, asymmetric, ireflexive - are the inverse of the above.
+Individual specification - individuals are of a certain type, that is, belong to a category (class).
+Restrictions - we can use the properties to describe new classes. Restrictions can be quantifier restriction , cardinality restrictions and hasValue. Quantifier restriction ca be existential (some) si universal (only). Cardinality restrictions describe the number of values a property may have. 
+OWL2 contains new elements and implicitly new possibilities for expression. Some of them :
+- expression of negation
+- qualified cardinality restrictions
+- the ability to express keys in the sense of databases
+- specification of properties by composition[16]
 
 
 
@@ -30,3 +43,4 @@ class specification - classes designate categories of individuals. Classes are i
 [13] https://www.w3.org/OWL/
 [14] https://en.wikipedia.org/wiki/Simple_Knowledge_Organization_System
 [15] JSON for Linking Data https://json-ld.org/
+[16] web10SemanticWeb-Ontologii-OWL2-BazeDeCunostinte-LogicileDescrierii-Rationamente.pdf
