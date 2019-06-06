@@ -8,8 +8,11 @@ Single-agent path-finding problems
 Often a problem can be formulated as a pathfinding problem in which the solution is represented by a series of actions that make the transition from the initial state to the goal state. Classic examples in the AI literature of path-finding problems are sliding-title puzzles, Rubik’s Cube and theorem proving. Real-world problems include the traveling salesman problem, vehicle navigation. 
 
 Game playing
-Adversarial search problems (a.k.a.games) are Problems in which we have two or more agents and each one tries to maximize its outcome. 
+Adversarial search problems (a.k.a.games) are problems in which we have two or more agents and each one tries to maximize its outcome. Chess, Checkers, and Gomoku are such examples.
 
-Constraint-satisfaction problems. Are problems where the desired state has to meet a number of restrictions. Real-world examples of constraint satisfaction problems are planning and scheduling applications.
+Constraint-satisfaction problems. 
+Are problems where the desired state has to meet a number of restrictions. Real-world examples of constraint satisfaction problems are planning and scheduling applications.
+
+
 
 
