@@ -15,5 +15,8 @@ The main functions of a reasoner are to verify the consistency of ontology and t
 > suport for queries
 As with databases, the possibility of extracting desired data from ontology highlights their usefulness.
 
+> extensibility 
+The ability to add new functionalities allows the tool to be adapted to the needs of each user. 
+
 > usability
 The ease with which users become familiar with the application interface, how intuitive it is, how easy find the desired item and how customizably is, in generally has effects on the quality of ontology and time of completion. It also counts the options and suggestions offered during use, portability, the ability of other users to participate.
