@@ -1,6 +1,58 @@
 Fluent. Acording to according to their own description: Fluent is a comprehensive tool for editing and manipulating complex ontologies that uses Controlled Natural Language. Fluent Editor provides one with a more suitable for human users alternative to XML-based OWL editors. It's main feature is the usage of Controlled English as a knowledge modeling language . Supported via Predictive Editor, it prohibits one from entering any sentence that is grammatically or morphologically incorrect and actively helps the user during sentence writing.[25]
 
+* hardware/software resources
+- the supported operating system is only Windows including version 10.
+- is available as a downloadable installation file (*.msi); 
+- in the case of version 3.6.10.28710, the archive has a size of 64.4 MB
+- free licensing for individual, academics or small professional teams.
 
+* interoperability
+- compatibil with Protege 5.0
+
+- offers the ability to import ontologies in various formats from disk or web or by specifying the URL.
+- the export of ontology can be done in several formats: RDF / XML, OWL / XML, OWL Functional, Manchester OWL.
+
+* support for graphical visualization
+- offers visualizations in several forms with the possibility of exporting as a picture.
+
+* support for reasoning
+-none
+
+* support for queries
+-none
+
+* other facilities
+
+
+* usability
+> creating an ontology
+- in a first view, it is possible to fill in the name of ontology, prefix, namespaces, comment and annotation. In the annotation you can choose from a list the desired item and the language.
+> creating classes
+- the class name, equivalent classes, superclasses, disjoint classes and keys can be passed.
+- the application does not help you choose disjoint classes, equivalent classes or superclasses
+- although we have passed the superclass, the graphic link does not automatically appear
+
+> adding object properties
+- in the characteristic graphic style, if for classes we have boxes, for properties we have lines (association). We unify with a line the two targeted classes and there is a view where we can complete the name of the property, the anotations, the property characteristics (functional ....), the equivalent properties, the superproprietals, the disjoint properties. in the same view, inverse (inverseOf) properties can be passed since it is a property between the same two classes.
+
+> adding data properties
+- select box class + properties. you can fill in the name, type, annotations, if it is functional, equivalent properties, superpropriety, disjoint.
+
+> adding individuals
+- you can fill in the name, type (choose from a list of already created classes), comment, annotation, difference or equivalence with other individuals
+
+> importing an ontology
+
+> reasoning
+
+> querying
+
+> visualization
+- you can set the background, how to place the graphic elements in space
+- each box can be set to box type (rectangle, ellipse, octagon, etc.), background color, font, other effects (shadow, 3D). Changes can only apply to the selected item or to all items of the same type.
+- export can be done as image in various formats including SVG.
+
+> others
 
 
 
