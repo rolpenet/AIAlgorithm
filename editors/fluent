@@ -8,6 +8,11 @@ Fluent. Acording to according to their own description: Fluent is a comprehensiv
 
 * interoperability
 - compatibil with Protege 5.0
+- can import ontologies from a URL or from a local file. Free edition only allow the import of small ontologies with less than 200 lines of CNL statements.
+
+
+
+************************************************* de modificat
 
 - offers the ability to import ontologies in various formats from disk or web or by specifying the URL.
 - the export of ontology can be done in several formats: RDF / XML, OWL / XML, OWL Functional, Manchester OWL.
