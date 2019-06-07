@@ -168,8 +168,7 @@ aib:AndOrSearch rdf:type owl:Class ;
 
 
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#ArtificialIntelligence
-aib:ArtificialIntelligence rdf:type owl:Class ;
-                           rdfs:subClassOf aib:SearchAlgoritm .
+aib:ArtificialIntelligence rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#BidirectionalSearch
