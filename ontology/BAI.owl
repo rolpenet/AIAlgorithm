@@ -18,18 +18,11 @@ aib:hasGoal rdf:type owl:ObjectProperty ;
             rdfs:domain [ rdf:type owl:Restriction ;
                           owl:onProperty aib:hasGoal ;
                           owl:someValuesFrom aib:AIAlgoritm
-                        ] ;
-            rdfs:range [ rdf:type owl:Restriction ;
-                         owl:onProperty aib:useAlgorithm ;
-                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                         owl:onClass aib:Goal
-                       ] .
+                        ] .
 
 
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#hasGoalTest
-aib:hasGoalTest rdf:type owl:ObjectProperty ;
-                rdfs:domain aib:Goal ;
-                rdfs:range aib:GoalTest .
+aib:hasGoalTest rdf:type owl:ObjectProperty .
 
 
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#hasSubproblem
@@ -118,7 +111,7 @@ aib:isObservable rdf:type owl:DatatypeProperty ,
                  rdfs:range xsd:string ,
                             [ rdf:type rdfs:Datatype ;
                               owl:oneOf [ rdf:type rdf:List ;
-                                          rdf:first "nu" ;
+                                          rdf:first "no" ;
                                           rdf:rest [ rdf:type rdf:List ;
                                                      rdf:first "partial" ;
                                                      rdf:rest [ rdf:type rdf:List ;
@@ -150,17 +143,14 @@ aib:isStatic rdf:type owl:DatatypeProperty ,
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#AIAgent
-aib:AIAgent rdf:type owl:Class .
-
-
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#AIAlgoritm
 aib:AIAlgoritm rdf:type owl:Class ;
                rdfs:subClassOf aib:Algorithm .
 
 
-###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#Action
-aib:Action rdf:type owl:Class .
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#AdversarialSearch
+aib:AdversarialSearch rdf:type owl:Class ;
+                      rdfs:subClassOf aib:SearchAlgoritm .
 
 
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#Algorithm
@@ -169,7 +159,7 @@ aib:Algorithm rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#AlphaBetaPruning
 aib:AlphaBetaPruning rdf:type owl:Class ;
-                     rdfs:subClassOf aib:SearchAlgoritm .
+                     rdfs:subClassOf aib:AdversarialSearch .
 
 
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#AndOrSearch
@@ -182,24 +172,24 @@ aib:ArtificialIntelligence rdf:type owl:Class ;
                            rdfs:subClassOf aib:SearchAlgoritm .
 
 
-###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#BestFirstSearch
-aib:BestFirstSearch rdf:type owl:Class ;
-                    rdfs:subClassOf aib:SearchAlgoritm .
-
-
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#BidirectionalSearch
 aib:BidirectionalSearch rdf:type owl:Class ;
-                        rdfs:subClassOf aib:SearchAlgoritm .
+                        rdfs:subClassOf aib:ExhaustiveSearch .
 
 
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#BreadthFirstSearch
 aib:BreadthFirstSearch rdf:type owl:Class ;
-                       rdfs:subClassOf aib:SearchAlgoritm .
+                       rdfs:subClassOf aib:ExhaustiveSearch .
 
 
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#ComputerVision
 aib:ComputerVision rdf:type owl:Class ;
                    rdfs:subClassOf aib:ArtificialIntelligence .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#ConstraintSatisfactionProblem
+aib:ConstraintSatisfactionProblem rdf:type owl:Class ;
+                                  rdfs:subClassOf aib:Problem .
 
 
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#ContinuousSpaceSearch
@@ -214,7 +204,7 @@ aib:Control_methods rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#DepthFirstSearch
 aib:DepthFirstSearch rdf:type owl:Class ;
-                     rdfs:subClassOf aib:SearchAlgoritm .
+                     rdfs:subClassOf aib:ExhaustiveSearch .
 
 
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#DiscreteSpaceSearch
@@ -229,6 +219,16 @@ aib:DistributedAI rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#Environment
 aib:Environment rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#ExhaustiveSearch
+aib:ExhaustiveSearch rdf:type owl:Class ;
+                     rdfs:subClassOf aib:SearchAlgoritm .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#GamePlaying
+aib:GamePlaying rdf:type owl:Class ;
+                rdfs:subClassOf aib:Problem .
 
 
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#GameTreeSearch
@@ -246,7 +246,7 @@ aib:GameTreeSearch rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#GeneticAlgoritms
 aib:GeneticAlgoritms rdf:type owl:Class ;
-                     rdfs:subClassOf aib:SearchAlgoritm .
+                     rdfs:subClassOf aib:IterativeImprovementSearch .
 
 
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#GlobalSearch
@@ -254,31 +254,24 @@ aib:GlobalSearch rdf:type owl:Class ;
                  rdfs:subClassOf aib:ContinuousSpaceSearch .
 
 
-###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#Goal
-aib:Goal rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#GoalTest
-aib:GoalTest rdf:type owl:Class .
-
-
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#GreedyBestFirstSearch
 aib:GreedyBestFirstSearch rdf:type owl:Class ;
-                          rdfs:subClassOf aib:SearchAlgoritm .
+                          rdfs:subClassOf aib:HeuristicSearch .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#HeuristicSearch
+aib:HeuristicSearch rdf:type owl:Class ;
+                    rdfs:subClassOf aib:SearchAlgoritm .
 
 
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#HillClimbing
 aib:HillClimbing rdf:type owl:Class ;
-                 rdfs:subClassOf aib:SearchAlgoritm .
+                 rdfs:subClassOf aib:IterativeImprovementSearch .
 
 
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#InformedSearchAlgorithms
 aib:InformedSearchAlgorithms rdf:type owl:Class ;
                              rdfs:subClassOf aib:DiscreteSpaceSearch ,
-                                             [ rdf:type owl:Restriction ;
-                                               owl:onProperty aib:useAlgorithm ;
-                                               owl:someValuesFrom aib:BestFirstSearch
-                                             ] ,
                                              [ rdf:type owl:Restriction ;
                                                owl:onProperty aib:useAlgorithm ;
                                                owl:someValuesFrom aib:GreedyBestFirstSearch
@@ -289,9 +282,14 @@ aib:InformedSearchAlgorithms rdf:type owl:Class ;
                                              ] .
 
 
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#IterativeImprovementSearch
+aib:IterativeImprovementSearch rdf:type owl:Class ;
+                               rdfs:subClassOf aib:SearchAlgoritm .
+
+
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#LocalBeamSearch
 aib:LocalBeamSearch rdf:type owl:Class ;
-                    rdfs:subClassOf aib:SearchAlgoritm .
+                    rdfs:subClassOf aib:IterativeImprovementSearch .
 
 
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#LocalSearch
@@ -322,7 +320,7 @@ aib:MachineLearning rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#MiniMax
 aib:MiniMax rdf:type owl:Class ;
-            rdfs:subClassOf aib:SearchAlgoritm .
+            rdfs:subClassOf aib:AdversarialSearch .
 
 
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#NaturalLanguageProcessing
@@ -330,14 +328,9 @@ aib:NaturalLanguageProcessing rdf:type owl:Class ;
                               rdfs:subClassOf aib:ArtificialIntelligence .
 
 
-###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#OptimalSolution
-aib:OptimalSolution rdf:type owl:Class ;
-                    rdfs:subClassOf aib:Solution .
-
-
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#ParticleSwarmOptimization
 aib:ParticleSwarmOptimization rdf:type owl:Class ;
-                              rdfs:subClassOf aib:SearchAlgoritm .
+                              rdfs:subClassOf aib:IterativeImprovementSearch .
 
 
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#Problem
@@ -390,7 +383,12 @@ aib:SearchPartialObservations rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#SimulatedAnealing
 aib:SimulatedAnealing rdf:type owl:Class ;
-                      rdfs:subClassOf aib:SearchAlgoritm .
+                      rdfs:subClassOf aib:IterativeImprovementSearch .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#SingleAgentPathfindingProblem
+aib:SingleAgentPathfindingProblem rdf:type owl:Class ;
+                                  rdfs:subClassOf aib:Problem .
 
 
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#Solution
@@ -404,7 +402,7 @@ aib:TabuSearch rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#UniformCostSearch
 aib:UniformCostSearch rdf:type owl:Class ;
-                      rdfs:subClassOf aib:SearchAlgoritm .
+                      rdfs:subClassOf aib:ExhaustiveSearch .
 
 
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#UninformedSearchAlgorithms
@@ -430,7 +428,7 @@ aib:UninformedSearchAlgorithms rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#A*Search
 <http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#A*Search> rdf:type owl:Class ;
-                                                                   rdfs:subClassOf aib:SearchAlgoritm .
+                                                                   rdfs:subClassOf aib:HeuristicSearch .
 
 
 ###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#KnowledgeRepresentation&Reasoning
@@ -447,9 +445,12 @@ aib:UninformedSearchAlgorithms rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#WolfGoatCabbageProblem
-aib:WolfGoatCabbageProblem rdf:type owl:NamedIndividual ,
-                                    aib:Problem .
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#Gomoku
+aib:Gomoku rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/tarmis/ontologies/2019/3/AIB#Maze
+aib:Maze rdf:type owl:NamedIndividual .
 
 
 #################################################################
@@ -469,4 +470,4 @@ aib:WolfGoatCabbageProblem rdf:type owl:NamedIndividual ,
 ] .
 
 
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi 
