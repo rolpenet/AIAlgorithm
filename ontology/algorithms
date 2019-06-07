@@ -50,11 +50,34 @@ Iterative-deepening A∗ (IDA*) combines the benefits of BFD, DFS, and heuristic
 
 Simplified Memory Bounded A* (SMA*) - it prunes nodes whose expansion has revealed less promising than expected. [21] It expands the newest best leaf and deletes the oldest worst leaf [modern pg 101].
 
+Iterative improvement (local) search - the most appropriate where the the pathj or the path cost is irrelevant, all that matter is the solution. it is also well suited for optimization problems where even if the optimal solution is not found, try to find one as close as possible to the optimum.
+
+Hill-climbing search - select between the nodes at the border the one that has the optimal cost function - uphill. It works and if the environment has continuous space search. It can lock into a local minimum on a plateau or on the ridge. There is variants : Simple Hill climbing (choose the first node with a better cost), Steepest-Ascent Hill climbing (compare the cost of all nodes and choose the optimal one), Stochastic hill climbing (randomly chooses a node and decides whether or not to choose another) [22]
+
+Simulated annealing - combine the hill climbing with a random choice. The choice of the next node is random and if it has a better cost it is chosen, otherwise it is only chosen with a certain prophecy, probability that can increase or decrease depending on the cost. [modern pg 125]
+
+Local beam search - is an optimization of best-first search. Unfruitful searches are abandoned. To avoid concentration, there is also a stochastic version. 
+
+Genetic algorithms - combine an uphill tendency with random exploration and exchange of information among parallel search threads. Genetic algorithms resemble with local beam with a few differences : the following nodes are generated from the combination of two parent nodes and suffer small mutations, each generation is started with k nodes chosen at random and based on a fitness function.[modern pg 127,128] 
+
+Ant colony optimization (ACO) - is based on the ability of ants to find the shortest way (between nest and food). The ants population indirectly communicate their knowledge through the pheromones they leave behind. The intensity of pheromones is an indication of the choice of that path  
+
+Adversarial search - the purpose of the algorithms in this category is to find a strategy - which is the best option considering the possible moves of the opponents.
+
+Minimax Algorithm - calculates based on a score the best move. This calculation can be made depending on the possible moves of the opponent "thinking" ahead with a few moves.
+
+Alpha–beta pruning  - is a search algorithm that seeks to decrease the number of nodes that are evaluated by the minimax algorithm in its search tree. It stops completely evaluating a move when at least one possibility has been found that proves the move to be worse than a previously examined move. 
+
+Ontology classes : Problem (SingleAgentPathfindingProblem, GamePlaying, ConstraintSatisfactionProblem), RepresentationOfProblem, Environment, Solution - Action, SequenceOfActions, SetOfValues - Algorithm - AIAlgorithm - SearchAlgorithm - ExhaustiveSearch (BreadthFirstSearch, DepthFirstSearch,BidirectionalSearch,Uniform Cost Search) -
+HeuristicSearch (GreedyBestFirstSearch, A*Search) - IterativeImprovementSearch (HillClimbingSearch, SimulatedAnnealing, LocalBeamSearch, GeneticAlgorithms, AntColonyOptimization) - AdversarialSearch (MinimaxAlgorithm, Alpha–betaPruning).
+
+Object Properties : 
 
 
 
 
 [21] https://en.wikipedia.org/wiki/SMA*
+[22] https://en.wikipedia.org/wiki/Hill_climbing
 
 
 
