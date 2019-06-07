@@ -69,15 +69,19 @@ Minimax Algorithm - calculates based on a score the best move. This calculation 
 Alpha–beta pruning  - is a search algorithm that seeks to decrease the number of nodes that are evaluated by the minimax algorithm in its search tree. It stops completely evaluating a move when at least one possibility has been found that proves the move to be worse than a previously examined move. 
 
 Ontology classes : Problem (SingleAgentPathfindingProblem, GamePlaying, ConstraintSatisfactionProblem), RepresentationOfProblem, Environment, Solution - Action, SequenceOfActions, SetOfValues - Algorithm - AIAlgorithm - SearchAlgorithm - ExhaustiveSearch (BreadthFirstSearch, DepthFirstSearch,BidirectionalSearch,Uniform Cost Search) -
-HeuristicSearch (GreedyBestFirstSearch, A*Search) - IterativeImprovementSearch (HillClimbingSearch, SimulatedAnnealing, LocalBeamSearch, GeneticAlgorithms, AntColonyOptimization) - AdversarialSearch (MinimaxAlgorithm, Alpha–betaPruning).
+HeuristicSearch (GreedyBestFirstSearch, A*Search) - IterativeImprovementSearch (HillClimbingSearch, SimulatedAnnealing, LocalBeamSearch, GeneticAlgorithms, AntColonyOptimization) - AdversarialSearch (MinimaxAlgorithm, AlphaBetaPruning).
 
-Object Properties : 
+Object Properties : Problem - hasSubProblem (reflexive); Problem - isResolvedBy - Algorithm; Algorithm - resolves - Problem; isResolvedBy isInverseOf resolves; 
 
+Data Properties: Environment - (isObservable; isDeterministic; isEpisodic; isDiscret), Algorithm (isComplete, isOptimal)
+
+Individuals: Problem (Maze, Gomoku), A*Search(IterativeDeepeningA∗, SimplifiedMemoryBoundedA*, StochasticHillClimbing)
 
 
 
 [21] https://en.wikipedia.org/wiki/SMA*
 [22] https://en.wikipedia.org/wiki/Hill_climbing
+[cartea modern]
 
 
 
