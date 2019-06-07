@@ -75,7 +75,7 @@ HeuristicSearch (GreedyBestFirstSearch, A*Search) - IterativeImprovementSearch (
 
 Object Properties : Problem - hasSubProblem (reflexive); Problem - isResolvedBy - Algorithm; Algorithm - resolves - Problem; isResolvedBy isInverseOf resolves; 
 
-Data Properties: Environment - (isObservable; isDeterministic; isEpisodic; isDiscret), Algorithm (isComplete, isOptimal)
+Data Properties: Environment - (isObservable; isDeterministic; isEpisodic; isDiscret), Algorithm (isComplete, isOptimal), Algorithm - (isOptimal; isComplete)
 
 Individuals: Problem (Maze, Gomoku), A*Search(IterativeDeepeningA∗, SimplifiedMemoryBoundedA*, StochasticHillClimbing)
 
