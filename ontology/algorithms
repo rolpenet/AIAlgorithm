@@ -1,3 +1,5 @@
+To estimate the power of each editor, besides the import of an existing ontology, we have also developed an ontology that models the search algorithms used by artificial intelligence.
+
 Search plays a major role in solving many Artificial Intelligence (AI) problems. Search is a universal problem-solving mechanism in AI. In many problems, sequence of steps required to solve is not known in advance but must be determined by systematic trial-and-error exploration of alternatives. 
 The problems that are addressed by AI search algorithms fall into three general classes:
 •	single-agent path-finding problems, 
@@ -12,6 +14,50 @@ Adversarial search problems (a.k.a.games) are problems in which we have two or m
 
 Constraint-satisfaction problems. 
 Are problems where the desired state has to meet a number of restrictions. Real-world examples of constraint satisfaction problems are planning and scheduling applications.
+
+In order for a problem to be approached by an algorithm it is necessary to find a representation of the problem. Problem space is a set of states and the connections between them to represent the problem. Problem space graph is used to represent a problem space. In the graph, the states are represented by nodes of the graph, and the operators by edges between nodes. Although most problem spaces correspond to graphs with more than one path between a pair of nodes, for simplicity they are often represented as trees, where the initial state is the root of the tree. 
+
+The solution to a problem can take the form of a set of values, an action or a sequence of actions, depending on what you want: optimization, best action or sequence of actions.
+
+The environment may have several characteristics:
+- it is totally, partially observable or unobservable - the degree of knowledge of the current state;
+- deterministic or stochastic - the following state can be determined depending on the current state and an action or not;
+- episodic or sequential - choosing an action influences the choice of other decisions;
+- discrete or continuous - space states can be perceived as discrete units or continuous space; [carte a modern pg 42-44]
+
+Search algorithms can be categorized according to the type of search used:
+
+Exhaustive search (uninformed or blind) - each node of the graph is analyzed until the goal node is found and the path is retained. The order in which nodes are checked differs depending on the algorithm.
+
+Breadth-first search (BFS) is an algorithm for traversing or searching tree or graph data structures. It starts from the root node, explores the neighboring nodes first and moves towards the next level neighbors. It generates one tree at a time until the solution is found. It can be implemented using FIFO queue data structure. This method provides shortest path to the solution.
+
+Depth-first search (DFS) is an algorithm for traversing or searching tree or graph data structures. One starts at the root (selecting some arbitrary node as the root in the case of a graph) and explores as far as possible along each branch before backtracking.
+
+Bidirectional Search
+It searches forward from initial state and backward from goal state till both meet to identify a common state. The path from initial state is concatenated with the inverse path from the goal state. Each search is done only up to half of the total path.
+
+Uniform Cost Search
+Sorting is done in increasing cost of the path to a node. It always expands the least cost node. It is identical to Breadth First search if each transition has the same cost.
+It explores paths in the increasing order of cost.
+
+Heuristic search (informed) - try to reduce the number of nodes visited using the knowledge available to select the most promising nodes. for this, a heuristic function is used.
+
+Greedy best-first search - expands the node that is estimated to be closest to goal, using Euclidean distance or Manhattan distance. As a disadvantage, it can get stuck in loops and is not optimal.
+
+A* search is a combination of lowest-cost-first and best-first searches that considers both path cost and heuristic information in its selection of which path to expand. For each path on the frontier, A* uses an estimate of the total path cost from a start node to a goal node constrained to start along that path.
+
+Iterative-deepening A∗ (IDA*) combines the benefits of BFD, DFS, and heuristics. 
+
+Simplified Memory Bounded A* (SMA*) - it prunes nodes whose expansion has revealed less promising than expected. [21] It expands the newest best leaf and deletes the oldest worst leaf [modern pg 101].
+
+
+
+
+
+[21] https://en.wikipedia.org/wiki/SMA*
+
+
+
 
 
 
