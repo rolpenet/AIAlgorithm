@@ -58,14 +58,14 @@ Naming convention - if we were accustomed to ontologies with CamelCase notation 
 - 
 
 > reasoning
--
+- in the reasoner tab, we can fill in which element we are interested in. For example, we are interested in the a-i-algorithm. We write the question in that box 'Who-Or-What is a a-i-algorithm'. The editor simultaneously displays the answer to three variants of questions : <?> is a a-i-algorithm (individuals); every <?> is an a-i-algorithm (sublasses); every algorithm is a <?>(superclasses). 
 
 > querying
+- you can query SPARQL using the rdf format, the prefix may be specified for ease of the query. The result can be copied to the clipboard from the resulting table right clicking over the selected rows in the control, this content can be pasted to any spreadsheet software.[26]
 
 > visualization
-- you can set the background, how to place the graphic elements in space
-- each box can be set to box type (rectangle, ellipse, octagon, etc.), background color, font, other effects (shadow, 3D). Changes can only apply to the selected item or to all items of the same type.
-- export can be done as image in various formats including SVG.
+- there is the possibility of a graphical visualization of classes, but the editor relies heavily on the existence of an R-plugin. Only two view variations are available (hierarchical layout and force directed layout). There are some options on the display data. 
+- the visualization can be saved as *.jpg or *.svg.
 
 > others
 - plugin for R-project
@@ -73,3 +73,4 @@ Naming convention - if we were accustomed to ontologies with CamelCase notation 
 
 
 [25] www.cognitum.eu/
+[26] http://docs.cognitum.eu/FluentEditor/
