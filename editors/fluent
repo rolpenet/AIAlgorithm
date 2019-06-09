@@ -25,6 +25,7 @@ Fluent. Acording to according to their own description: Fluent is a comprehensiv
 
 * usability
 Fluent Editor uses Controlled Natural Language to create and model ontologies. The first thing to do before starting an ontology project is to learn and understand the CNL syntax and grammar. 
+Naming convention - if we were accustomed to ontologies with CamelCase notation for classes and mixedCase for attributes, in this case all identifiers are separated by dash, the class and property identifiers are written in small letters, individuals are written with the first large letter separated by dash. All axioms appear in document view. On the right side you can see the taxonomy tree, something like the Protege class hierarchy.
  
 > creating an ontology
 - in a first view, it is possible to fill in the name of ontology, prefix, namespaces, comment and annotation. In the annotation you can choose from a list the desired item and the language.
