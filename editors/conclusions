@@ -1,5 +1,5 @@
 > hardware / software requirements
-Protege and OWLGrEd is Java-based and can be installed on any platform that has JRE (Java Runtime Environment). Larger dimensions and memory requirements in the Protege case  are explained by the addition of reasoning, quering, etc., although at visualizing of large ontologies are more prone to crash. WebProtege on the other hand does not require installation, just a browser and a e-mail account.
+Protege and OWLGrEd are Java-based and can be run on any platform that has JRE (Java Runtime Environment). Larger dimensions and memory requirements in the Protege case  are explained by the addition of reasoning, quering, etc., although at visualizing of large ontologies are more prone to crash. Fluent Editor requires installation on a windows-based system. WebProtege on the other hand does not require installation, just a browser and a e-mail account.
 
 > interoperability
 Protege has most of the ontology serialization formats for export import (Turtle, OBO, LaTeX, Jason-LD) and the procedure seems simpler. Graphical visualizations can be saved as images in Protege and OWLGrEd with a plus for the latter having the possibility to save in SVG format.
