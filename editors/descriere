@@ -5,7 +5,7 @@ WebProtégé is a free, open source collaborative ontology development environme
 
 The  OWLGrEd is an ontology editor which allows creation, modifying and graphical visualization ontologies using a compact yet intuitive presentation. Its grahical visualisation is inspired by UML class diagram notation, but it also alows Manchester syntax for class expressions [6]
 
-FluentEditor is a tool for creating, editing and manipulating ontologies using a knowledge modeling language more suitable for human use - CNL (Controlled Natural Language). Ii has support for reasoning and SPARQL queries. [27]
+FluentEditor, according to their own description, is a comprehensive tool for editing and manipulating complex ontologies that uses Controlled Natural Language. Fluent Editor provides one with a more suitable for human users alternative to XML-based OWL editors. It's main feature is the usage of Controlled English as a knowledge modeling language . Supported via Predictive Editor, it prohibits one from entering any sentence that is grammatically or morphologically incorrect and actively helps the user during sentence writing. [27]
 
 [6] http://owlgred.lumii.lv
 [27] http://docs.cognitum.eu/FluentEditor
