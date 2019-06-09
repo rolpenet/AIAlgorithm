@@ -12,7 +12,7 @@ Fluent. Acording to according to their own description: Fluent is a comprehensiv
 - can export in format RDF/XML, OWL/RDF, as an attachment to mail or export to Ontorion (a distributed knowledge management system that uses CNL interface)  
 
 * support for graphical visualization
-- offers visualizations in two forms with the possibility of exporting as a picture (*jpg,*svg).
+- offers visualizations in two forms with the possibility of exporting as a picture (*.jpg,*.svg).
 
 * support for reasoning
 - Reasoning engine : HermiT
@@ -24,6 +24,8 @@ Fluent. Acording to according to their own description: Fluent is a comprehensiv
 
 
 * usability
+Fluent Editor uses Controlled Natural Language to create and model ontologies. The first thing to do before starting an ontology project is to learn and understand the CNL syntax and grammar. 
+ 
 > creating an ontology
 - in a first view, it is possible to fill in the name of ontology, prefix, namespaces, comment and annotation. In the annotation you can choose from a list the desired item and the language.
 > creating classes
