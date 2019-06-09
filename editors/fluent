@@ -21,31 +21,44 @@ Fluent. Acording to according to their own description: Fluent is a comprehensiv
 - SPARQL
 
 * other facilities
-
+- to extend the expressivity of OWL, this editor appeals to SWRL - Semantic Web Rule Language. 
 
 * usability
 Fluent Editor uses Controlled Natural Language to create and model ontologies. The first thing to do before starting an ontology project is to learn and understand the CNL syntax and grammar. 
-Naming convention - if we were accustomed to ontologies with CamelCase notation for classes and mixedCase for attributes, in this case all identifiers are separated by dash, the class and property identifiers are written in small letters, individuals are written with the first large letter separated by dash. All axioms appear in document view. On the right side you can see the taxonomy tree, something like the Protege class hierarchy.
+Naming convention - if we were accustomed to ontologies with CamelCase notation for classes and mixedCase for attributes, in this case all identifiers are separated by dash, the class and property identifiers are written in small letters, individuals are written with the first large letter separated by dash. All axioms appear in document view. The editor corrects you when entering any sentence that is grammatically or morphologically incorrect and helps you with suggestions during sentence writing[27]. On the right side you can see the taxonomy tree, something like the Protege class hierarchy.
+- selecting a few statements, you can view their XML form.
  
 > creating an ontology
-- in a first view, it is possible to fill in the name of ontology, prefix, namespaces, comment and annotation. In the annotation you can choose from a list the desired item and the language.
+- to complete the namespace, use the keyword 'Namespace :' followed by IRI.
+- Instead of prefixes, references are used with the keyword "References" and in statements the element of the other ontology is succeded by the reference prefix.
+<<<<<<<<<< name of ontology, comment and annotation.>>>>>>>>>
+
 > creating classes
-- the class name, equivalent classes, superclasses, disjoint classes and keys can be passed.
-- the application does not help you choose disjoint classes, equivalent classes or superclasses
-- although we have passed the superclass, the graphic link does not automatically appear
+- to create a class it is used concept subsumption - one concept subsumes the other one if the set described by the first concept is a subset of the other one (Algorithm subclassOf Thing <=> Every algorithm is a thing). 
+- to express class equivalency it is used the keyword 'if-and-only-if-it'.
+- the disjunction is expressed by negation, keyword "no".
+- you can declare into a single expression, disjoint union of several classes with the keyword "if-and-only-if-it-either".
 
 > adding object properties
-- in the characteristic graphic style, if for classes we have boxes, for properties we have lines (association). We unify with a line the two targeted classes and there is a view where we can complete the name of the property, the anotations, the property characteristics (functional ....), the equivalent properties, the superproprietals, the disjoint properties. in the same view, inverse (inverseOf) properties can be passed since it is a property between the same two classes.
+- the properties of objects, called roles, are also added by a statement. There may be existential role restriction ('Every problem is-resolved-by an algorithm') and universal role restriction ('Every algorithm resolves nothing-but Problem').
+- complex expresion
+- intersectia
+- uniunea
+- cardinal restrictions can be expressed using the keyword (less than, more than, at-most, at-least, different-than).
+- you can express transitivity, reflexivity ('Every problem has-sub-problem itself.'), irreflexivity (a kind of reflexivity negation), symmetry, role equivalence ('if-and-only-if');  
 
 > adding data properties
-- select box class + properties. you can fill in the name, type, annotations, if it is functional, equivalent properties, superpropriety, disjoint.
+- to specify a datatype of data property you can specify into brackets the type of data literal (some value), integer (some integer value), double (some real value) boolean ('Every algorithm is-complete nothing-but (some boolean value)'), string (some string value), date (some datetime value).  
+- you can use the following keywords to specify a range of values (greater-than, lower-than,greater-or-equal-to,lower-or-equal-to, different-from, equal-to).
 
 > adding individuals
-- you can fill in the name, type (choose from a list of already created classes), comment, annotation, difference or equivalence with other individuals
+- to specify individuals (here instances of concepts), a statement is sufficient ('Maze is a problem.'). For individuals, the name begins with a capital letter and without the expression 'every'.
 
 > importing an ontology
+- 
 
 > reasoning
+-
 
 > querying
 
